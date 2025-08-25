@@ -1,13 +1,18 @@
 {
   "name": "shop-sphere-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "this si nodejs backend for amazon clone",
+  "main": "tsc \"index.js\" ",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec \"npm run start\" --ext ts --watch src"
   },
   "keywords": [],
-  "author": "",
+  "author": "Anukalp",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
@@ -17,6 +22,7 @@
     "mongoose": "^8.18.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/mongoose": "^5.11.96",
     "nodemon": "^3.1.10",
