@@ -1,4 +1,4 @@
-import mongoose, { Types, model, Schema, mongo } from "mongoose";
+import mongoose, { Types, model, Schema} from "mongoose";
 
 export interface ICart {
     user: Types.ObjectId;
