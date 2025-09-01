@@ -8,6 +8,7 @@ export interface IProduct {
     price: number;
     imageUrl: string;
     stock: number;
+    category: Types.ObjectId
 }
 
 const productSchema = new Schema({
@@ -41,10 +42,14 @@ const productSchema = new Schema({
     stock: { 
         type: Number,
         trim: true
-    }
-    
+    },
 
-    
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: "Category",
+        required: true
+    }
+
 },
 {
     timestamps: true
